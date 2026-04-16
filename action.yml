@@ -15,6 +15,16 @@ runs:
       uses: actions-rust-lang/setup-rust-toolchain@v1
       with:
         components: rustfmt, clippy
+        install-toolchain: always
+
+    - name: Verify cargo
+      shell: bash
+      run: |
+        if ! command -v cargo &> /dev/null; then
+          echo "Installing Rust..."
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        fi
 
     - name: Apply cargo fmt
       if: inputs.fixes == 'all' || inputs.fixes == 'fmt'
