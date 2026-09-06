@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Coccinella-Labs/rust-fix/main/.github/assets/thumbnail.png" alt="rust-fix" width="100%">
+</p>
+
 # Rust Fix
 
 [![Release](https://img.shields.io/github/v/release/libnudget/rust-fix?logo=github&label=latest)](https://github.com/libnudget/rust-fix/releases)
